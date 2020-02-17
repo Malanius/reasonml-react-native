@@ -14,3 +14,5 @@ let make = () =>
 
 [@genType]
 let default = make;
+
+RootStyles.viewStyle(~paddingTop = 10., ())
