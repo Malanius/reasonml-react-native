@@ -18,5 +18,13 @@
   "refmt": 3,
   "reason": {
     "react-jsx": 3
+  },
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
   }
 }

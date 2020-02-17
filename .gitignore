@@ -18,3 +18,6 @@ web-report/
 .merlin
 *.bs.js
 .bsb.lock
+
+### genType ###
+*.gen.tsx
