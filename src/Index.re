@@ -4,7 +4,7 @@ open NativeBase;
 
 [@react.component]
 let make = () =>
-  <StyleProvider style={Js.Dict.empty()}>
+  <StyleProvider style={StyleProvider.(getTheme(renaultTheme))}>
     <Root>
       <Container style={Js.Dict.empty()}>
         <View> <Text> "Hello world!"->string </Text> </View>
