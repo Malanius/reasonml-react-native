@@ -1,8 +1,16 @@
 open React;
 open ReactNative;
+open NativeBase;
 
 [@react.component]
-let make = () => <View> <Text> "Hello world!" -> string </Text> </View>;
+let make = () =>
+  <StyleProvider style={Js.Dict.empty()}>
+    <Root>
+      <Container style={Js.Dict.empty()}>
+        <View> <Text> "Hello world!"->string </Text> </View>
+      </Container>
+    </Root>
+  </StyleProvider>;
 
 [@genType]
 let default = make;
