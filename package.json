@@ -11,12 +11,14 @@
   "dependencies": {
     "bs-fetch": "^0.5.1",
     "expo": "~36.0.0",
+    "expo-constants": "^8.0.0",
     "native-base": "^2.13.8",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-screens": "2.0.0-alpha.12",
     "react-native-web": "~0.11.7",
+    "reason-expo": "^34.4.1",
     "reason-react": "^0.7.0",
     "reason-react-native": "^0.61.1"
   },

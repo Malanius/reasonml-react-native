@@ -2236,7 +2236,7 @@ expo-asset@~8.0.0:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-constants@~8.0.0:
+expo-constants@^8.0.0, expo-constants@~8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-8.0.0.tgz#e2c5a072dacb4263ccfc57dcb4835ca791960d48"
   integrity sha512-NGRwSWfhwNFA9WVLXwqnSDPJJ4DdXTqEkl9Fr9PcyW5VCoFgz7uke256E1YZsYhOE0Ph365lu/5jjZs+MRmRog==
@@ -4477,6 +4477,11 @@ readable-stream@^2.0.1, readable-stream@^2.2.2, readable-stream@~2.3.6:
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+reason-expo@^34.4.1:
+  version "34.4.1"
+  resolved "https://registry.yarnpkg.com/reason-expo/-/reason-expo-34.4.1.tgz#8981a5dcb36f67119385847172037dc68ec0cd64"
+  integrity sha512-dyYSbb1o58e/V2MTNCBZGfI9geH9OGLo3BDKw5xDFc6l6vvbqe3JNerzzTDLwA8q68WbvyvFHy+UvLEwQTqiDg==
 
 reason-react-native@^0.61.1:
   version "0.61.1"
