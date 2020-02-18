@@ -14,8 +14,10 @@
     "reason-react",
     "reason-react-native",
     "bs-fetch",
-    "reason-expo"
+    "reason-expo",
+    "decco"
   ],
+  "ppx-flags": ["decco/ppx"],
   "warnings": {
     "error": "+101+8"
   },

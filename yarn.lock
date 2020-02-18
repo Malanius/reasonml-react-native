@@ -2009,6 +2009,11 @@ decamelize@^1.1.1, decamelize@^1.2.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
+decco@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/decco/-/decco-1.1.1.tgz#69e252c3bdf1b6f4f10dd115ba44f25908d0033c"
+  integrity sha512-hif221MrEzLcjguORCYml7CAfCwWap6HuRI4x0G9TSLRoJkkDKc/Qx01JleOzMubOWFK4dbJNmKXR4+S/r3obw==
+
 decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"

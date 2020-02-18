@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bs-fetch": "^0.5.1",
+    "decco": "^1.1.1",
     "expo": "~36.0.0",
     "expo-constants": "^8.0.0",
     "native-base": "^2.13.8",
