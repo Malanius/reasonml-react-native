@@ -1,20 +1,26 @@
 open React;
 
-external eraseType: 'a => 'b = "%identity";
-
 module type HooksType = {
   let url: string;
   type response;
+  let response_encode: Decco.encoder(response);
+  let response_decode: Decco.decoder(response);
 };
 
-[@bs.val] external dir: 'any => unit = "console.dir";
+type remoteDataState('t) =
+  | Loading
+  | Error(string)
+  | NoData
+  | Data('t);
 
-module Make = (M: HooksType) => {
-  type remoteData =
-    | Loading
-    | Error(string)
-    | NoData
-    | Data(M.response);
+module type HooksTypeOut = {
+  type t;
+  type remoteData = remoteDataState(t);
+  let useGet: unit => remoteData;
+};
+
+module Make = (M: HooksType) : (HooksTypeOut with type t := M.response) => {
+  type remoteData = remoteDataState(M.response);
 
   type action =
     | Fetch
@@ -41,9 +47,14 @@ module Make = (M: HooksType) => {
         Js.Promise.(
           Fetch.fetch(M.url)
           |> then_(Fetch.Response.json)
-          |> then_(json => dispatch(Success(json->eraseType)) |> resolve)
+          |> then_(json =>
+               switch (json->M.response_decode) {
+               | Error(error) => error.message->Error->dispatch->resolve
+               | Ok(data) => data->Success->dispatch->resolve
+               }
+             )
           |> catch(error =>
-               error->eraseType##message->Error->dispatch->resolve
+               error->Obj.magic##message->Error->dispatch->resolve
              )
           |> ignore
         );

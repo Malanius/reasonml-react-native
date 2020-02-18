@@ -2,11 +2,13 @@ open React;
 open ReactNative;
 open NativeBase;
 
-module SwapiPersonHooks =
-  Hooks.Make({
-    let url = "https://swapi.co/api/people/1";
-    type response = {. "name": string};
-  });
+module Swapi = {
+  let url = "https://swapi.co/api/people/1";
+  [@decco]
+  type response = {name: string};
+};
+
+module SwapiPersonHooks = Hooks.Make(Swapi);
 
 [@react.component]
 let make = () => {
@@ -23,7 +25,7 @@ let make = () => {
              | NoData => React.null
              | Loading => <Text> "Loading..."->string </Text>
              | Error(e) => <Text> {("Error: " ++ e)->string} </Text>
-             | Data(data) => <Text> {data##name->string} </Text>
+             | Data(data) => <Text> data.name->string </Text>
              }}
           </View>
         </Container>
