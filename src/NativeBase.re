@@ -16,7 +16,9 @@ module StyleProvider = {
 
 module Container = {
   [@bs.module "native-base"] [@react.component]
-  external make: (~style: 'any, ~children: React.element) => React.element =
+  external make:
+    (~style: array(ReactNative.Style.t), ~children: React.element) =>
+    React.element =
     "Container";
 };
 
