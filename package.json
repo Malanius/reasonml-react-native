@@ -9,6 +9,7 @@
     "re:watch": "bsb -clean-world -make-world -w"
   },
   "dependencies": {
+    "bs-fetch": "^0.5.1",
     "expo": "~36.0.0",
     "native-base": "^2.13.8",
     "react": "~16.9.0",
