@@ -3,10 +3,10 @@ module StyleProvider = {
   type theme;
 
   let renaultTheme: theme = [%raw
-    {|require("./native-base-theme/variables/renault")|}
+    {|require("../native-base-theme/variables/renault")|}
   ];
 
-  [@bs.module "./native-base-theme/components"]
+  [@bs.module "../native-base-theme/components"]
   external getTheme: theme => t = "default";
 
   [@bs.module "native-base"] [@react.component]
